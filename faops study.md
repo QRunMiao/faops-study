@@ -13,10 +13,9 @@ make
 ```
 # 三、软件详情
 + 可用help命令可以获得本软件的基本信息和各命令使用说明
++ 用法：faops help
++ 实例：  
 
-用法：faops help
-
-实例：  
 输入：
 ```
 $ faops help
@@ -55,6 +54,7 @@ Options:
 + 功能：统计一个或多个基因序列文件中不同序列的总长和各碱基数量  
 + 用法：faops count <in.fa> [more_files.fa]  
 + 实例：  
+
 输入：  
 ```
 faops count a1.fa
@@ -96,6 +96,7 @@ cgcatgctgAGCTTTTTTTTATGTAGCTGATCGGACTGATCGATGCTAGCTGATGCTAGCTAGCGTAGCTAGCTGATCGA
 >read5
 AGCTGATCGATCGATCGTAGCTAcgatcgtagctagctagctgatcgaCGATCGTGATCGTA
 ```
+
 输出：
 ```
 read0   43
@@ -109,7 +110,10 @@ read5   62
 
 + 功能：屏蔽(或跳过)fasta文件中的区域
 + 用法：faops masked [options] <in.fa> [more_files.fa]
-+ 可选：-g      只记录N/n的区域
++ 可选：
+```
+-g      只记录N/n的区域
+```
 + 实例：
 
 输入：
@@ -120,7 +124,9 @@ a4.fa文件内容：
 ```
 >read8
 ATGTCGTAGCTAGNCATGntacgnnctagctgactagctagcCNNNNATTTGGCCGATCGACT
+```
 输出：
+```
 read8:14
 read8:19
 read8:24-25
@@ -129,7 +135,10 @@ read8:44-47
 ## 4.frag
 + 功能：提取指定片段。若一个序列文件中包含多个序列，则只对第一个序列进行指定位置的提取操作。可以通过手动添加参数-l来指定提出片段的分行宽度。
 + 用法：	faops frag [options] <in.fa> start end <out.fa>
-+ 可选：	-l	INT		输出时序列分行的宽度，默认为80
++ 可选：	
+```
+-l	INT		输出时序列分行的宽度，默认为80
+```
 + 实例：
 
 输入：
@@ -191,7 +200,10 @@ TA
 ## 6.one
 + 功能：只提取一个fa序列
 + 用法：faops some [options] <in.fa> <name> <out.fa>
-+ 可选: -l	INT		输出时序列分行的宽度，默认为80
++ 可选: 
+```
+-l	INT		输出时序列分行的宽度，默认为80
+```
 + 实例：
 
 输入：
@@ -240,7 +252,10 @@ TA
 ## 8.order
 + 功能：给定顺序重排序列。本功能类似some，但内存调度策略存在差别：order会一次性占用更高的内存。
 + 用法：	faops order [options] <in.fa> <list.file> <out.fa>
-+ 可选： -l	INT		输出时序列分行的宽度，默认为80
++ 可选： 
+```
+-l	INT		输出时序列分行的宽度，默认为80
+```
 + 实例：
 
 输入：
@@ -353,7 +368,10 @@ TA
 ## 11.split-name
 + 功能：按序列名称对序列数据文件进行切割
 + 用法：faops split-name [options] <in.fa> <outdir>
-+ 可选：-l	INT		输出时序列分行的宽度，默认为80
++ 可选：
+```
+-l	INT		输出时序列分行的宽度，默认为80
+```
 + 实例：
 
 输入：
@@ -369,13 +387,17 @@ read3.fa文件内容：
 >read3
 actgtgtgaTGTGTGCGAGCAGCGAGCAGCTAGCGATGCATGC
 ```
-输出：read4.fa文件内容：
+输出：
+
+read4.fa文件内容：
 ```
 >read4
 cgcatgctgAGCTTTTTTTTATGTAGCTGATCGGACTGATCGATGCTAGCTGATGCTAGCTAGCGTAGCTAGCTGATCGA
 TGCAGCGAGCGATGCTAGCGATGCGATCGTAC
 ```
-输出：read5.fa文件内容：
+输出：
+
+read5.fa文件内容：
 ```
 >read5
 AGCTGATCGATCGATCGTAGCTAcgatcgtagctagctagctgatcgaCGATCGTGATCGTA
@@ -524,6 +546,7 @@ read0:1-10,15-16
 read1:1-10
 ```
 a1.fa文件内容同1
+
 输出：
 ```
 >read0(+):1-10
