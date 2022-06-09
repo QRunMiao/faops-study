@@ -1,12 +1,14 @@
 # 一、软件介绍
-faops是一款针对fasta或fasta q文件格式的一款软件，以C语言为编写语言，可以在Windows环境和Linux环境运行。对于生物相关领域的工作者来说，faops是一款不可缺少的、简单且实用的基因组学统计分析软件。
+faops是一款针对fasta或fasta q文件格式的一款软件，以C语言为编写语言，可以在Windows环境和Linux环境运行。对于生物相关领域的工作者来说，faops是一款不可缺少的、简单且实用的基因组学统计分析软件。  
 # 二、软件安装
 可以用 brew直接安装，命令如下：
-···brew install wang-q/tap/faops
+```
+brew install wang-q/tap/faops  
 也可下载软件包后，在运行系统环境自行编译：
-···git clone https://github.com/wang-q/faops
-···cd faops
-···make
+```
+git clone https://github.com/wang-q/faops  
+cd  
+make
 # 三、软件详情：可用help命令可以获得本软件的基本信息和各命令使用说明
 用法：faops help
 实例：
@@ -373,7 +375,7 @@ ATGATGGGGt
 CC
 >read1(+):1-10
 cattcgAGTC
-# 四、小结
+# 五、小结
 Faops软件是南京大学生科院王强老师编写的一款软件，可以帮助生物工作者更好更高效的处理信息。且该软件是开源的，可以从https://github.com/wang-q/faops下载安装。
 
 
